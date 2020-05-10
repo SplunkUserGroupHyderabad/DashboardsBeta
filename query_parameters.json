@@ -1,0 +1,60 @@
+{
+	"visualizations": {
+		"chart_1": {
+			"type": "viz.pie",
+			"options": {},
+			"dataSources": {
+				"primary": "search_1"
+			},
+			"description": "Chart of Top Sourcetypes between $TimeRange.earliest$ and $TimeRange.latest$"
+		}
+	},
+	"dataSources": {
+		"search_1": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "$TimeRange.earliest$",
+					"latest": "$TimeRange.latest$"
+				},
+				"query": "index=_internal | top limit=100 sourcetype | eval percent = round(percent,2)"
+			}
+		}
+	},
+	"inputs": {
+		"input_1": {
+			"type": "input.timerange",
+			"title": "Select a time:",
+			"options": {
+				"token": "TimeRange",
+				"defaultValue": "-24h,now"
+			}
+		}
+	},
+	"layout": {
+		"options": {
+			"submitButton": false,
+			"height": 1250,
+			"display": "auto-scale",
+			"width": 1200
+		},
+		"globalInputs": [
+			"input_1"
+		],
+		"structure": [
+			{
+				"item": "chart_1",
+				"type": "block",
+				"position": {
+					"x": 250,
+					"y": 80,
+					"w": 680,
+					"h": 530
+				}
+			}
+		],
+		"type": "absolute"
+	},
+	"title": "Time Picker Input Example",
+	"description": "Add a time range picker to modify a search time span."
+}
