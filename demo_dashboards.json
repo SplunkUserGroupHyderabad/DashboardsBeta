@@ -1,0 +1,112 @@
+{
+	"layout": {
+		"type": "absolute",
+		"options": {},
+		"structure": [
+			{
+				"item": "viz_3Xd2Gil2",
+				"type": "block",
+				"position": {
+					"x": 20,
+					"y": 160,
+					"w": 300,
+					"h": 300
+				}
+			},
+			{
+				"item": "viz_Ae4jJ1sm",
+				"type": "block",
+				"position": {
+					"x": 420,
+					"y": 160,
+					"w": 300,
+					"h": 300
+				}
+			},
+			{
+				"item": "viz_6gKBCkW4",
+				"type": "block",
+				"position": {
+					"x": 850,
+					"y": 160,
+					"w": 290,
+					"h": 290
+				}
+			},
+			{
+				"item": "viz_Q8yU3qvm",
+				"type": "block",
+				"position": {
+					"x": 30,
+					"y": 570,
+					"w": 300,
+					"h": 150
+				}
+			},
+			{
+				"item": "viz_5C28hdf0",
+				"type": "block",
+				"position": {
+					"x": 420,
+					"y": 570,
+					"w": 300,
+					"h": 150
+				}
+			},
+			{
+				"item": "viz_MASvA7AC",
+				"type": "block",
+				"position": {
+					"x": 840,
+					"y": 540,
+					"w": 100,
+					"h": 220
+				}
+			}
+		]
+	},
+	"dataSources": {
+		"ds_OClcJD9A": {
+			"type": "ds.search",
+			"options": {
+				"queryParameters": {
+					"earliest": "rt-30s",
+					"latest": "rt"
+				},
+				"query": "| makeresults count=5\n"
+			},
+			"name": "Search_1"
+		}
+	},
+	"description": "Dashboard Demo for UserGroup Meetup#1",
+	"title": "Demo Dashboard",
+	"visualizations": {
+		"viz_3Xd2Gil2": {
+			"type": "viz.bar",
+			"options": {}
+		},
+		"viz_Ae4jJ1sm": {
+			"type": "viz.column",
+			"options": {}
+		},
+		"viz_6gKBCkW4": {
+			"type": "viz.pie",
+			"options": {}
+		},
+		"viz_Q8yU3qvm": {
+			"type": "viz.area",
+			"options": {}
+		},
+		"viz_5C28hdf0": {
+			"type": "viz.line",
+			"options": {}
+		},
+		"viz_MASvA7AC": {
+			"type": "viz.singlevalueicon",
+			"options": {
+				"showValue": false,
+				"icon": "splunk-enterprise-kvstore://icon-desktop__65679a5e-ea9f-4dfc-9a72-e31b0f8b10ef.svg"
+			}
+		}
+	}
+}
